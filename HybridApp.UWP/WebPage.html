@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hybrid app</title>
+    <script type="text/javascript">
+        function showToast() {
+            if (window.messageHelper) {
+                window.messageHelper.showToastNotification();
+            }
+        }
+
+        function getPosition() {
+            if (window.navigationHelper) {
+                document.getElementById("result").innerHTML = "Getting your position...";
+                window.navigationHelper.getUserPositionAsync().then(function (result) {
+                    document.getElementById("result").innerHTML = result;
+                });
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="showToast();">Show toast</button>
+    <button onclick="getPosition();">Get position</button>
+    <div id="result"></div>
+</body>
+</html>
