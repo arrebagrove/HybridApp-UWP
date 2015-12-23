@@ -14,5 +14,6 @@
         
         <WebView Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                   NavigationStarting="OnNavigationStarting" x:Name="Web" Source="ms-appx-web:///WebPage.html" />
+        
     </Grid>
 </Page>

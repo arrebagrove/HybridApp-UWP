@@ -1,4 +1,6 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System.Diagnostics;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using HybridApp.Library;
 
 namespace HybridApp.UWP
@@ -13,13 +15,13 @@ namespace HybridApp.UWP
             this.InitializeComponent();
         }
 
-private void OnNavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
-{
-    MessageHelper messageHelper = new MessageHelper();
-    sender.AddWebAllowedObject("messageHelper", messageHelper);
+        private void OnNavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
+        {
+            MessageHelper messageHelper = new MessageHelper();
+            sender.AddWebAllowedObject("messageHelper", messageHelper);
 
-    NavigationHelper navigationHelper = new NavigationHelper();
-    sender.AddWebAllowedObject("navigationHelper", navigationHelper);
-}
+            NavigationHelper navigationHelper = new NavigationHelper();
+            sender.AddWebAllowedObject("navigationHelper", navigationHelper);
+        }
     }
 }

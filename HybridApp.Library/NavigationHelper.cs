@@ -22,6 +22,6 @@ namespace HybridApp.Library
             double longitude = position.Coordinate.Point.Position.Longitude;
 
             return $"Latitude: {latitude}, Longitude: {longitude}";
-        } 
+        }
     }
 }
